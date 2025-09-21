@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +98,33 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .prose-pushkin {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  .poem-text {
+    @apply font-serif text-lg leading-loose tracking-wide;
+  }
+
+  .elegant-card {
+    @apply bg-gradient-to-br from-accent/30 to-accent/10 backdrop-blur-sm border border-primary/20 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .golden-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent;
   }
 }
